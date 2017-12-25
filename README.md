@@ -6,7 +6,7 @@ A unit conversion plugin for KeyPirinha
 Download the `Units.keypirinha-package` file and move it to the `InstalledPackage` folder located at:
 
 * `Keypirinha\portable\Profile\InstalledPackages` in **Portable mode**
-* **Or** 
+**Or** 
 * `%APPDATA%\Keypirinha\InstalledPackages` in **Installed mode** (the final path would look like
   `C:\Users\%USERNAME%\AppData\Roaming\Keypirinha\InstalledPackages`)
 
