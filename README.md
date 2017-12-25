@@ -1,10 +1,11 @@
 # Keypirinha-Units
 A unit conversion plugin for KeyPirinha
 
-It can take three formats:
+
 
 # Usage
 
+It can take three formats:
 ### Quick Convert:
 
 `x Units`
