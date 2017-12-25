@@ -9,8 +9,8 @@ Download the `Units.keypirinha-package` file and move it to the `InstalledPackag
 
 **Or** 
 
-* `%APPDATA%\Keypirinha\InstalledPackages` in **Installed mode** (the final path would look like
-  `C:\Users\%USERNAME%\AppData\Roaming\Keypirinha\InstalledPackages`)
+* `%APPDATA%\Keypirinha\InstalledPackages` in **Installed mode** 
+  The final path would look like `C:\Users\%USERNAME%\AppData\Roaming\Keypirinha\InstalledPackages`)
 
 # Usage
 
