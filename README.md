@@ -41,8 +41,13 @@ Converts the units without a multiplier.
 [Can only convert between things on the same line. e.g `gal to qrt`]
 
 Liquids:
+
 - "gal", "gallon", "gallons", "quart", "quarts", "qrt", "pint", "pints", "cup", "cups", "floz", "tablespoon", "tablespoons", "tbsp", "teaspoon", "teaspoons", "tsp", "kiloliter", "kiloliters", "kl", "liter", "liters", "l", "li",
+
 Distances:
+
 - "milliliter", "milliliters", "ml", "mile", "miles", "mi", "foot", "feet", "ft", "inch", "inches", "in", "kilometer", "kilometers", "km", "meter", "meters", "m", "centimeter", "centimeters", "cm", "millimeter", "millimeters", "mm",
+
 Angles:	
+
 - "degree", "degrees", "deg", "radian", "radians", "rad"
