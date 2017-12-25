@@ -3,27 +3,27 @@ A unit conversion plugin for KeyPirinha
 
 It can take three formats:
 
-	Quick Convert:
-		"x Units" --> Returns units that go hand-in-hand with the input.
-		Acceptable Inputs:
-			Liters -> Gallons
-			Gallon -> Liters
-			Mile -> Kilometer
-			Kilometer -> Mile
-			Feet -> Inches
-			Inches -> Millimters
-			Millimeters -> Inches
-			Degrees -> Radians
-			Radians -> Degrees
-	4 Words:
-		"x Units to Units"
-			Converts from the input Unit to the output unit, and multiplies by x.
-			ex: "5 gal to milliliters" = "18927.053 Milliliters"
-	3 Words:
-		"x Units Units"
-			Converts from the input Unit to the output unit, and multiplies by x without the word "to" [which can actually be any word]
-		"Units to Units"
-			Converts the units without a multiplier.
+Quick Convert:
+	"x Units" --> Returns units that go hand-in-hand with the input.
+	Acceptable Inputs:
+		Liters -> Gallons
+		Gallon -> Liters
+		Mile -> Kilometer
+		Kilometer -> Mile
+		Feet -> Inches
+		Inches -> Millimters
+		Millimeters -> Inches
+		Degrees -> Radians
+		Radians -> Degrees
+4 Words:
+	"x Units to Units"
+		Converts from the input Unit to the output unit, and multiplies by x.
+		ex: "5 gal to milliliters" = "18927.053 Milliliters"
+3 Words:
+	"x Units Units"
+		Converts from the input Unit to the output unit, and multiplies by x without the word "to" [which can actually be any word]
+	"Units to Units"
+		Converts the units without a multiplier.
 
 Convertable Units: [Can only convert between things on the same line. e.g "gal to qrt"]
 	Liquids:
