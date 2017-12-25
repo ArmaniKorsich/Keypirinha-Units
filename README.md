@@ -7,7 +7,8 @@ It can take three formats:
 
 ### Quick Convert:
 
-"x Units" --> Returns units that go hand-in-hand with the input.
+'x Units'
+Returns units that go hand-in-hand with the input.
 
 - Acceptable Inputs:
 - Liters -> Gallons
