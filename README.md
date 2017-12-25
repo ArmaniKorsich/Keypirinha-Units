@@ -11,7 +11,7 @@ It can take three formats:
 
 Returns units that go hand-in-hand with the input.
 
-- Acceptable Inputs:
+Acceptable Inputs:
 - Liters -> Gallons
 - Gallon -> Liters
 - Mile -> Kilometer
