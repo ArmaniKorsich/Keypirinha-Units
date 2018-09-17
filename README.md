@@ -49,7 +49,7 @@ Converts from the input Unit to the output unit, and multiplies by x without the
 Converts the units without a multiplier.
 
 # Convertable Units: 
-[Can only convert between things on the same line. e.g `gal to qrt`]
+[Can only convert between things of the same category. e.g `gal to qrt`]
 
 Liquids:
 
