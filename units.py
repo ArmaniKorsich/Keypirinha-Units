@@ -18,11 +18,13 @@ class Units(kp.Plugin):
 
     units = [[1, 4, 2, 2, 8, 2, 3, .00000492892, 1000, 1000, 0.000264172],#gal to quart, to pint, to cup, to oz, to tbsp, to tsp, to kiloliter, to liter, to milliliter, to gal
             [1, 5280, 12, .0000254, 1000, 100, 10, 0.000000621371], #mile to foot to inch, to km, to meter, to cm, to mm, to foot
-            [1, 0.01745327777, 57.2958279088] #degree to radians to degree
+            [1, 0.01745327777, 57.2958279088], #degree to radians to degree
+            [1, 1024, 1024, 1024, 1024, 8] #TB to GB, MB, KB, Bytes, bits
             ]
     unitNames = ["gal", "gallon", "gallons", "quart", "quarts", "qrt", "pint", "pints", "cup", "cups", "floz", "tablespoon", "tablespoons", "tbsp", "teaspoon", "teaspoons", "tsp", "kiloliter", "kiloliters", "kl", "liter", "liters", "l", "li",
                  "milliliter", "milliliters", "ml", "mile", "miles", "mi", "foot", "feet", "ft", "inch", "inches", "in", "kilometer", "kilometers", "km",
-                 "meter", "meters", "m", "centimeter", "centimeters", "cm", "millimeter", "millimeters", "mm", "degree", "degrees", "deg", "radian", "radians", "rad"]
+                 "meter", "meters", "m", "centimeter", "centimeters", "cm", "millimeter", "millimeters", "mm", "degree", "degrees", "deg", "radian", "radians", "rad",
+                 "tb", "gb", "mb", "kb", "bytes", "bits", "gigabytes", "megabytes", "kilobytes", "byte", "bit", "gigabyte", "megabyte", "kilobyte", "g", "k", "m", "b1"]
     def __init__(self):
         super().__init__()
 
@@ -37,8 +39,8 @@ class Units(kp.Plugin):
         if Units.isNumber(splitInput[0]):
             if len(splitInput) == 2:
                 inValue = float(splitInput[0])
-                inUnitString = splitInput[1].lower()
-                outUnitString = splitInput[1].lower()
+                inUnitString = splitInput[1]
+                outUnitString = splitInput[1]
                 Units.outUnitString = outUnitString
                 Units.determineUnits(inUnitString, inUnit)
                 Units.determineUnits(outUnitString, outUnit)
@@ -73,8 +75,8 @@ class Units(kp.Plugin):
                 Units.convert(inValue, inUnit, outUnit)
             if len(splitInput) == 4:
                 inValue = float(splitInput[0])
-                inUnitString = splitInput[1].lower()
-                outUnitString = splitInput[3].lower()
+                inUnitString = splitInput[1]
+                outUnitString = splitInput[3]
                 Units.outUnitString = outUnitString
                 Units.determineUnits(inUnitString, inUnit)
                 Units.determineUnits(outUnitString, outUnit)
@@ -83,8 +85,8 @@ class Units(kp.Plugin):
         else:
             if len(splitInput) == 3:
                 inValue = 1
-                inUnitString = splitInput[0].lower()
-                outUnitString = splitInput[2].lower()
+                inUnitString = splitInput[0]
+                outUnitString = splitInput[2]
                 Units.outUnitString = outUnitString
                 Units.determineUnits(inUnitString, inUnit)
                 Units.determineUnits(outUnitString, outUnit)
@@ -101,6 +103,27 @@ class Units(kp.Plugin):
             return False
     def determineUnits(string, unit):
 ##        print ("determining units")
+        if string == "TB" or string == "Terabytes":
+            unit[0] = 3 #Data size
+            unit[1] = 0
+        elif string == "GB" or string == "Gigabytes":
+            unit[0] = 3 
+            unit[1] = 1
+        elif string == "MB" or string == "Megabytes":
+            unit[0] = 3 
+            unit[1] = 2
+        elif string == "KB" or string == "Kilobytes":
+            unit[0] = 3 
+            unit[1] = 3
+        elif string == "B" or string == "Byte" or string == "Bytes":
+            unit[0] = 3 
+            unit[1] = 4
+        elif string == "b" or string == "bit" or string == "bits":
+            unit[0] = 3 
+            unit[1] = 5 
+        else:
+            pass
+
         string = string.lower()
         if string == "gal" or string == "gallon" or string == "gallons":
             unit[0] = 0 #liquid
@@ -158,7 +181,7 @@ class Units(kp.Plugin):
             unit[1] = 0
         elif string == "radian" or string == "radians" or string == "rad":
             unit[0] = 2
-            unit[1] = 1
+            unit[1] = 1         
         else:
             return
     #@classmethod

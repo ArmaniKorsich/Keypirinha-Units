@@ -62,3 +62,7 @@ Distances:
 Angles:	
 
 - "degree", "degrees", "deg", "radian", "radians", "rad"
+
+Data Size:
+
+- "TB", "GB", "MB", "KB", "bytes", "bits", "gigabytes", "megabytes", "kilobytes", "byte", "bit", "gigabyte", "megabyte", "kilobyte"
